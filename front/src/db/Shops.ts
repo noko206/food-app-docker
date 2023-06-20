@@ -1,10 +1,10 @@
-export type ShopDataType = {
+export type shopDetailsType = {
 	name: string;
 	address: string;
 	tags: Array<string>;
 };
 
-export const Shops = (): Array<ShopDataType> => {
+export const Shops = (): Array<shopDetailsType> => {
 	return [
 		{
 			name: 'テスト店舗1',
@@ -13,3 +13,5 @@ export const Shops = (): Array<ShopDataType> => {
 		},
 	];
 };
+
+export default Shops;

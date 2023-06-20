@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
-import useGetShopData from '../hooks/useGetShopData';
+import useShopData from '../hooks/useShopDetails';
 
 const ShopDetails = () => {
-	const { getShopData, shopData } = useGetShopData();
-	useEffect(() => getShopData(0), []);
+	const { getShopDetails, shopDetails } = useShopData();
+	useEffect(() => getShopDetails(0), []);
 
 	return (
 		<>
 			<h1>これは店舗詳細ページです！</h1>
-			<p>{shopData?.name}</p>
-			<p>{shopData?.address}</p>
+			<p>{shopDetails?.name}</p>
+			<p>{shopDetails?.address}</p>
 			<ul>
-				{shopData?.tags.map((tag: string) => {
+				{shopDetails?.tags.map((tag: string) => {
 					return <li>{tag}</li>;
 				})}
 			</ul>
